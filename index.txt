@@ -1,0 +1,27 @@
+1-Instala Git en tu ordenador si aún no lo tienes instalado.
+
+2-Crea un directorio en tu ordenador donde deseas almacenar tu repositorio. Puedes hacerlo desde la línea de
+comandos o mediante el explorador de archivos.
+
+3-Inicia un nuevo repositorio en tu directorio utilizando el siguiente comando de Git en la línea de
+comandos: git init
+
+4-Crea algunos archivos en tu directorio y añádelos al área de preparación de Git utilizando el siguiente
+comando: git add nombre_archivo
+
+5-Haz un commit de los archivos añadidos a tu repositorio Git local mediante el siguiente comando:
+git commit -m "mensaje_de_commit"
+
+6-Crea un repositorio en GitHub. Para hacerlo, inicia sesión en tu cuenta de GitHub, haz clic en el botón "+",
+selecciona "Nuevo repositorio" y sigue las instrucciones para crearlo.
+
+7-Copia la URL del repositorio en GitHub que acabas de crear.
+
+8-Vincula tu repositorio Git local con el repositorio en GitHub mediante el siguiente comando:
+git remote add origin url_repositorio_github
+
+9-Sube los cambios de tu repositorio Git local al repositorio en GitHub mediante el siguiente comando:
+git push -u origin master
+
+10-Listo, ahora tienes un repositorio Git local y otro en GitHub. Puedes seguir trabajando en tu repositorio
+local y subir los cambios al repositorio en GitHub utilizando el comando "git push" en el futuro.
