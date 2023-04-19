@@ -50,10 +50,33 @@ class Descuento extends itemCarrito {
 			}
 		}while(!seleccionSeccion);
 		
-		System.out.println("Ingrese el precio: ");
-		this.precio = ingreso.nextDouble();
-		System.out.println("Ingrese la cantidad: ");
-		this.cantidad = ingreso.nextInt();
+		boolean ingresoPrecioCorrecto = false;
+	    do {
+	        try {
+	            System.out.println("Ingrese el precio: ");
+	            this.precio = Double.parseDouble(ingreso.next());
+	            ingresoPrecioCorrecto = true;
+	        } catch (NumberFormatException e) {
+	            System.out.println("Por favor ingrese un valor de precio valido.");
+	        }
+	    } while (!ingresoPrecioCorrecto);
+
+	    boolean ingresoCantidadCorrecto = false;
+	    do {
+	        try {
+	            System.out.println("Ingrese la cantidad: ");
+	            this.cantidad = Integer.parseInt(ingreso.next());
+	            ingresoCantidadCorrecto = true;
+	        } catch (NumberFormatException e) {
+	            System.out.println("Por favor ingrese una cantidad valida.");
+	        }
+	    } while (!ingresoCantidadCorrecto);
+		
+		
+		//System.out.println("Ingrese el precio: ");
+		//this.precio = ingreso.nextDouble();
+		//System.out.println("Ingrese la cantidad: ");
+		//this.cantidad = ingreso.nextInt();
 		this.subtotal=calculoSubtotal();
 		this.totalPagarItem=calcularDescuento();
 		
@@ -81,7 +104,16 @@ class Descuento extends itemCarrito {
 		System.out.println("* Manzana");
 		System.out.println("* Banana");
 		System.out.println("* Pera");
-		this.nproducto = ingreso.next();
+		boolean ingresoProductoCorrecto = false;
+	    do {
+	        try {
+	            this.nproducto = ingreso.next();
+	            Double.parseDouble(nproducto);
+	            System.out.println("Por favor ingrese un nombre de producto valido.");
+	        } catch (NumberFormatException e) {
+	            ingresoProductoCorrecto = true;
+	        }
+	    } while (!ingresoProductoCorrecto);
 	}
 	public void seccionVerduras() {
 		System.out.println("--Seleccione el producto: ");
@@ -89,7 +121,16 @@ class Descuento extends itemCarrito {
 		System.out.println("* Papa");
 		System.out.println("* Zanahoria");
 		System.out.println("* Cebolla");
-		this.nproducto = ingreso.next();
+		boolean ingresoProductoCorrecto = false;
+	    do {
+	        try {
+	            this.nproducto = ingreso.next();
+	            Double.parseDouble(nproducto);
+	            System.out.println("Por favor ingrese un nombre de producto valido.");
+	        } catch (NumberFormatException e) {
+	            ingresoProductoCorrecto = true;
+	        }
+	    } while (!ingresoProductoCorrecto);
 	}
 	public void seccionLacteos() {
 		System.out.println("--Seleccione el producto: ");
@@ -97,7 +138,16 @@ class Descuento extends itemCarrito {
 		System.out.println("* Queso");
 		System.out.println("* Crema de leche");
 		System.out.println("* Yogurt");
-		this.nproducto = ingreso.next();
+		boolean ingresoProductoCorrecto = false;
+	    do {
+	        try {
+	            this.nproducto = ingreso.next();
+	            Double.parseDouble(nproducto);
+	            System.out.println("Por favor ingrese un nombre de producto valido.");
+	        } catch (NumberFormatException e) {
+	            ingresoProductoCorrecto = true;
+	        }
+	    } while (!ingresoProductoCorrecto);
 	}
 	public void seccionBebidas() {
 		System.out.println("--Seleccione el producto: ");
@@ -105,7 +155,16 @@ class Descuento extends itemCarrito {
 		System.out.println("* Gaseosa");
 		System.out.println("* Aperitivos");
 		System.out.println("* Cerveza");
-		this.nproducto = ingreso.next();
+		boolean ingresoProductoCorrecto = false;
+	    do {
+	        try {
+	            this.nproducto = ingreso.next();
+	            Double.parseDouble(nproducto);
+	            System.out.println("Por favor ingrese un nombre de producto valido.");
+	        } catch (NumberFormatException e) {
+	            ingresoProductoCorrecto = true;
+	        }
+	    } while (!ingresoProductoCorrecto);
 	}
 	
 }
